@@ -1,0 +1,144 @@
+{
+ "p1": {
+  "highs_ds": 35126.94858928963,
+  "highs_ipm": 35126.94858928963,
+  "gap_ds_ipm": 0.0,
+  "feasibility": {
+   "soc_recur_err": 9.094947017729282e-13,
+   "soc_below_min": 0.0,
+   "soc_above_max": 0.0,
+   "soc_end_err": 0.0,
+   "charge_over_power": 0.0,
+   "disch_over_power": 0.0,
+   "negatives": 0.0,
+   "balance_violation": 2.2737367544323206e-13
+  },
+  "kkt": {
+   "primal_obj": 35126.94858928963,
+   "dual_obj": 35126.94858928963,
+   "duality_gap": 0.0,
+   "max_stationarity_violation": 0.0,
+   "max_comp_slack": 4.86465978610795e-14,
+   "max_dual_infeas": 0.0,
+   "sign": -1.0
+  },
+  "dp_grid15": {
+   "obj": 35199.89801751332,
+   "gap_vs_lp": 72.94942822369194
+  },
+  "dp_grid5": {
+   "obj": 35150.992858134436,
+   "gap_vs_lp": 24.044268844809267
+  },
+  "emergency_relax_obj": 35126.94858928963,
+  "emergency_energy": 0.0,
+  "simultaneous_slots": 0,
+  "baseline_rules": {
+   "feasible": true,
+   "cost": 45580.560915409995,
+   "b_sum": 63227.473816666665,
+   "charge": 5333.333333333333,
+   "discharge": 4319.999999999999,
+   "spill": 6672.168049999999,
+   "soc_min": 2700.0,
+   "soc_max": 7500.0,
+   "soc_end": 6000.0
+  }
+ },
+ "p2": {
+  "days": 334,
+  "violations": {
+   "soc_rec": 5.4569682106375694e-12,
+   "soc_low": 0.0,
+   "soc_high": 0.0,
+   "soc_end": 0.0,
+   "balance": 2.2737367544323206e-13,
+   "power": 0.0,
+   "negative": 0.0,
+   "emergency": 1.3430127236008227e-12
+  },
+  "total_cost_recomputed": 12245046.915277634,
+  "total_energy": 0.0,
+  "total_cost_solver": 12245046.91527763,
+  "cost_gap": 3.725290298461914e-09,
+  "zero_emergency_confirmed": true,
+  "emergency_relaxation": {
+   "2025-03-20": {
+    "no_emergency": 39945.11538371089,
+    "with_emergency_relax": 39945.11538371089,
+    "gap": 0.0,
+    "emergency": 0.0
+   },
+   "2025-09-23": {
+    "no_emergency": 41320.23255747086,
+    "with_emergency_relax": 41320.23255747086,
+    "gap": 0.0,
+    "emergency": 0.0
+   },
+   "2025-12-21": {
+    "no_emergency": 59672.54678037064,
+    "with_emergency_relax": 59672.54678037064,
+    "gap": 0.0,
+    "emergency": 0.0
+   }
+  }
+ },
+ "p3": {
+  "days": 334,
+  "recomputed_settle": 12800700.28640896,
+  "recomputed_emergency": 4170218.709634189,
+  "recomputed_total": 16970918.99604315,
+  "worst_violations": {
+   "soc_low": 1.0913936421275139e-11,
+   "soc_high": 1.0913936421275139e-11,
+   "soc_end": 5.4569682106375694e-12,
+   "power": 1.1368683772161603e-13,
+   "negative": 6.548361852765083e-12,
+   "emergency_gap": 0.0,
+   "settle_gap": 0.0
+  },
+  "n_days_with_emergency": 334,
+  "top_emergency_days": [
+   [
+    "2025-05-04",
+    5693.420949333333,
+    4604.837318937198
+   ],
+   [
+    "2025-03-20",
+    5601.697450000001,
+    4713.708918768334
+   ],
+   [
+    "2025-09-29",
+    5555.1061666666665,
+    4676.203458648333
+   ],
+   [
+    "2025-10-15",
+    5432.872833333334,
+    4510.755192565001
+   ],
+   [
+    "2025-04-30",
+    5316.634799999998,
+    4385.94847675833
+   ],
+   [
+    "2025-10-26",
+    5272.168950000002,
+    4521.908317098334
+   ],
+   [
+    "2025-10-23",
+    5232.502783333333,
+    4616.30988155
+   ],
+   [
+    "2025-08-10",
+    5180.650033333335,
+    4559.002975843335
+   ]
+  ]
+ }
+}

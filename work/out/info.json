@@ -1,0 +1,28 @@
+{
+ "att1_vs_att2_load_maxabs": 1607.4898999999996,
+ "att1_vs_att2_pv_maxabs": 2485.6627,
+ "att1_vs_att4_price_maxabs": 0.42599999999999993,
+ "att1_price_min": 0.3713,
+ "att1_price_max": 1.3952,
+ "att2_load_min": 1995.7176,
+ "att2_load_max": 7978.8849,
+ "att2_pv_max": 10216.2,
+ "att4_price_min": 0.0076,
+ "att4_price_max": 1.7936,
+ "att4_price_mean": 0.7661976046423135,
+ "n_days_att2": 365,
+ "att1_labels_first_last": [
+  "00:10:00",
+  "0:00+1"
+ ],
+ "att3_forecast_times": [
+  "0:00",
+  "12:00",
+  "18:00",
+  "6:00"
+ ],
+ "pv_daily_energy_mean_kWh": 55482.8570183105,
+ "load_daily_energy_mean_kWh": 111024.80808301368,
+ "pv_surplus_slots_per_day_mean": 27.753424657534246,
+ "att3_nan": 0
+}

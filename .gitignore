@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+**/.DS_Store
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# LaTeX / pandoc 中间产物
+*.aux
+*.log
+*.out
+*.toc
+*.tex
+
+# 临时文件
+tmp/
+scratch/
+*.tmp
