@@ -132,7 +132,7 @@ $PY src/v2_write_results.py && $PY src/v2_figures.py && $PY src/v2_tables_final.
 ## 7 许可协议
 
 本仓库作者原创的代码、数学模型与说明文档采用 **MIT License**（见 [`LICENSE`](LICENSE)），
-可自由使用、修改、分发（保留版权声明即可）。
+可自由使用、修改、分发（保留版权声明即可）；许可覆盖范围见 [`NOTICE.md`](NOTICE.md)。
 
 `data/` 目录中的竞赛题面与附件为**第三方材料**，版权归竞赛主办方所有，不在 MIT 许可范围内。
 
