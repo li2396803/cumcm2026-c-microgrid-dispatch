@@ -16,8 +16,11 @@ import os
 import numpy as np
 import openpyxl
 
-BASE = "/Users/lizelin/Downloads/CUMCM2026Problems/C题/附件"
-OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "out")
+HERE = os.path.dirname(os.path.abspath(__file__))          # <repo>/work/src
+ROOT = os.path.dirname(os.path.dirname(HERE))              # <repo>
+# 附件目录: 默认 <repo>/data/附件, 可用环境变量 CUMCM_DATA_DIR 覆盖
+BASE = os.environ.get("CUMCM_DATA_DIR", os.path.join(ROOT, "data", "附件"))
+OUT = os.path.join(os.path.dirname(HERE), "out")           # <repo>/work/out
 os.makedirs(OUT, exist_ok=True)
 
 K = 144          # ten-minute slots per day

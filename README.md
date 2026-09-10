@@ -79,13 +79,15 @@ v2-D 把基线与完全信息下界之间差距的 **77.3%** 补齐；波动电�
 
 ```bash
 cd work
-PY=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3   # 换成你的解释器
+PY=python3                                  # 需 Python 3.10+，含 numpy/scipy/openpyxl/matplotlib
 
 # ---- 基线：四个子问题 ----
 $PY src/extract.py          # 读取附件 → out/data.npz
 $PY src/pipeline.py         # 问题 1/2/3/4 → out/sol_p*.npz
 $PY src/verify_all.py       # 多方法检验（KKT、DP、逐时段复核）
-$PY src/export_cbc_cases.py && /tmp/venvcumcm/bin/python src/cbc_check.py   # CBC 独立求解器交叉验证
+$PY src/export_cbc_cases.py
+$PY -m venv /tmp/venvcumcm && /tmp/venvcumcm/bin/pip install -q pulp numpy   # 交叉验证环境
+/tmp/venvcumcm/bin/python src/cbc_check.py                                # CBC 独立求解器验证
 $PY src/analysis_hedge.py   # 保守裕量扫描
 $PY src/analysis_forecast.py# 预报时刻价值
 $PY src/analysis_sensitivity.py
@@ -123,9 +125,25 @@ $PY src/v2_write_results.py && $PY src/v2_figures.py && $PY src/v2_tables_final.
 
 ## 6 数据来源说明
 
-`data/` 目录中的题目与附件来自竞赛公开题面，仅用于复现本仓库的计算；如不希望公开，
-可直接删除该目录（代码中的路径指向 `work/out/data.npz` 缓存，见 `work/src/extract.py` 顶部的 `BASE` 常量）。
+`data/` 目录中的题目与附件来自竞赛主办方公开发布的题面材料，仅用于复现本仓库的计算结果，
+详见 [`data/README.md`](data/README.md)。该目录可安全删除：`work/src/extract.py` 支持环境变量
+`CUMCM_DATA_DIR` 指定附件目录，也可直接使用仓库内已缓存的 `work/out/data.npz`。
 
-## 7 许可
+## 7 许可协议
 
-仅供学习与复现使用。
+本仓库作者原创的代码、数学模型与说明文档采用 **MIT License**（见 [`LICENSE`](LICENSE)），
+可自由使用、修改、分发（保留版权声明即可）。
+
+`data/` 目录中的竞赛题面与附件为**第三方材料**，版权归竞赛主办方所有，不在 MIT 许可范围内。
+
+> 如需替换为其他协议：`Apache-2.0`（含专利授权，适合工程化复用）、`CC-BY-4.0`（适合文档/论文为主的项目）
+> 都是常见选择；若希望代码与文档分别授权，可保留 MIT 覆盖代码、另为 `docs/` 增加 CC-BY-4.0 说明。
+
+## 8 引用
+
+若本仓库的方法或代码对你有帮助，欢迎引用：
+
+```
+Ada. (2026). CUMCM2026 C题：微网与外部电网电力调控策略 —— 完整建模、求解与验证.
+GitHub: https://github.com/li2396803/cumcm2026-c-microgrid-dispatch (MIT License)
+```

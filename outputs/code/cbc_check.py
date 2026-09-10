@@ -1,6 +1,7 @@
 """用 PuLP + CBC (与 HiGHS 完全独立的求解器) 复算导出的 LP 实例.
 
-运行方式: /tmp/venvcumcm/bin/python src/cbc_check.py
+运行方式: <venv>/bin/python src/cbc_check.py
+(先在独立虚拟环境安装 PuLP: python -m venv <venv> && <venv>/bin/pip install pulp numpy)
 """
 from __future__ import annotations
 
