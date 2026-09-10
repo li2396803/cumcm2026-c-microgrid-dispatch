@@ -135,15 +135,3 @@ $PY src/v2_write_results.py && $PY src/v2_figures.py && $PY src/v2_tables_final.
 可自由使用、修改、分发（保留版权声明即可）；许可覆盖范围见 [`NOTICE.md`](NOTICE.md)。
 
 `data/` 目录中的竞赛题面与附件为**第三方材料**，版权归竞赛主办方所有，不在 MIT 许可范围内。
-
-> 如需替换为其他协议：`Apache-2.0`（含专利授权，适合工程化复用）、`CC-BY-4.0`（适合文档/论文为主的项目）
-> 都是常见选择；若希望代码与文档分别授权，可保留 MIT 覆盖代码、另为 `docs/` 增加 CC-BY-4.0 说明。
-
-## 8 引用
-
-若本仓库的方法或代码对你有帮助，欢迎引用：
-
-```
-Ada. (2026). CUMCM2026 C题：微网与外部电网电力调控策略 —— 完整建模、求解与验证.
-GitHub: https://github.com/li2396803/cumcm2026-c-microgrid-dispatch (MIT License)
-```
